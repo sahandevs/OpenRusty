@@ -10,5 +10,5 @@ edition = "2018"
 crate-type = ["staticlib"]
 
 [dependencies]
-rhai = "0.19"
+rhai = { version = "0.19", features = ["no_float"]}
 nginx = "0.10"

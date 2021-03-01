@@ -3,6 +3,11 @@ budget OpenResty written in rust.
 
 [WIP]
 
+## Manual test
+
+```
+curl -i -H "Test-Header3: YES" http://localhost:8082/
+```
 
 ## Rapid dev with nginx
 
