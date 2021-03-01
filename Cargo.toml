@@ -6,5 +6,9 @@ edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[lib]
+crate-type = ["staticlib"]
+
 [dependencies]
 rhai = "0.19"
+nginx = "0.10"
