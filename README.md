@@ -2,9 +2,8 @@
 budget OpenResty written in rust.
 
 
-# ngnix.conf
+### ngnix.conf
 ```
-
 events { }
 
 http {
@@ -19,14 +18,14 @@ http {
 ```
 
 
-## Manual test
+### Manual test
 
 ```
-curl -i -H "Test-Header3: YES" http://localhost:8082/
+curl -i -H "Drop-Me: YES" http://localhost:8082/
 ```
 
-## Rapid dev with nginx
+### Rapid dev
 
 ```
-(sudo ./objs/nginx -s stop || echo "nginx is not running") && cargo build --release --manifest-path=$MODULE_PATH/Cargo.toml && rm "./objs/ngx_modules.o" && rm ./objs/nginx && make && sudo ./objs/nginx
+(sudo ./objs/nginx -s stop || echo "nginx is not running") && cargo build --release --manifest-path=$MODULE_PATH/Cargo.toml && ((rm "./objs/ngx_modules.o" && rm ./objs/nginx) || echo "no artifact") && make && echo "========make done===========" && sudo ./objs/nginx
 ```
