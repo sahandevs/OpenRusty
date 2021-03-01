@@ -85,7 +85,7 @@ pub unsafe extern "C" fn ngx_http_mod_init(cf: *mut ngx_conf_t) -> ngx_int_t {
 #[no_mangle]
 unsafe extern "C" fn request_handler(r: *mut ngx_http_request_t) -> ngx_int_t {
     for header in (*r).headers_in.into_iter() {
-        if header.key() == "Drop-Me-RS".to_string() {
+        if header.key() == "Test-Header3".to_string() {
             return NGX_HTTP_FORBIDDEN as isize;
         }
     }
