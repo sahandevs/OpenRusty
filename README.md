@@ -1,7 +1,23 @@
-# OpenRusty
+# [WIP] OpenRusty
 budget OpenResty written in rust.
 
-[WIP]
+
+# ngnix.conf
+```
+
+events { }
+
+http {
+    server {
+        listen 8082;
+
+        location / {
+            open_rusty_request_filter 'for h in headers.keys() { if h == "Drop-Me" { return 403; } }';
+        }
+    }
+}
+```
+
 
 ## Manual test
 
