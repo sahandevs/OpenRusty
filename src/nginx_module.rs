@@ -1,5 +1,5 @@
 use crate::{
-    ngnix_utils::*,
+    nginx_utils::*,
     ngx_string,
     script::{EvalContext, ScriptEngine},
 };

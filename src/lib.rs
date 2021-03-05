@@ -1,3 +1,3 @@
 pub mod script;
-pub mod ngnix_module;
-mod ngnix_utils;
+pub mod nginx_module;
+mod nginx_utils;

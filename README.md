@@ -2,7 +2,7 @@
 budget OpenResty written in rust.
 
 
-### ngnix.conf
+### nginx.conf
 ```
 events { }
 
